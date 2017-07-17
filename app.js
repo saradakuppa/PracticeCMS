@@ -22,9 +22,9 @@ $(document).ready(function(){
 	}); //end of add item 
 
 	//deselect item on mouse out
-		$('.selectable div').mouseout(function(){
-			$(this).removeClass('selected');
-		});	
+		// $('.selectable div').mouseout(function(){
+		// 	$(this).removeClass('selected');
+		// });	
 
 		//move selected item
 		$('#sortable').sortable();
