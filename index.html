@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jqyery and the DOM</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="app.css">
+  </head>
+  <body>
+    <h1 id="myHeading">JavaScript and the DOM</h1>
+    <p>Making a web page interactive</p>
+    <button id="toggle">Hide/Show List</button>
+    <div class="list">
+      <h2 class="description">ToDo List</h2>
+      <input type="text" id="new-list-item" class="description" placeholder="Enter an Activity ....">
+      <button id="add-list-item" class="add-todo-list-item">Add Item</button>
+      <button class="remove">Delete Item</button>
+      <div id="items-list">
+        <div class="selectable" id="sortable"></div>
+      </div>
+      <!-- <button class="removeItemButton">RemoveItem</button> -->
+     </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="app.js"></script> 
+  </body>
+</html>
