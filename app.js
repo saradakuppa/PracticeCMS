@@ -1,3 +1,9 @@
+//git status
+//git add .
+//git commit -m "comment"
+//git push origin master
+
+
 $(document).ready(function(){
 	//Add new item to the list
 	$('#add-list-item').click(function(){
