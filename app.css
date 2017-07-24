@@ -70,6 +70,8 @@ p + button {
   background: #508abc;
 }
 
+.list {margin-right: 50px;}
+
 
 .selected { background: #222; color: white; border: 1px solid #637a91;}
 .selectable div:hover {background: #F39814; color: white; border: 1px solid #637a91;}

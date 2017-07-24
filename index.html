@@ -10,16 +10,24 @@
     <h1 id="myHeading">JavaScript and the DOM</h1>
     <p>Making a web page interactive</p>
     <button id="toggle">Hide/Show List</button>
-    <div class="list">
-      <h2 class="description">ToDo List</h2>
-      <input type="text" id="new-list-item" class="description" placeholder="Enter an Activity ....">
-      <button id="add-list-item" class="add-todo-list-item">Add Item</button>
-      <button class="remove">Delete Item</button>
-      <!-- <button class="edit">Edit Item</button> -->
-      <div id="items-list">
-        <div class="selectable" id="sortable"></div>
-      </div>
-      <!-- <button class="removeItemButton">RemoveItem</button> -->
+    <div class="container content">
+      <div class="row">
+        <div class="list col-xs-8 m-r-3">
+          <h2 class="description">ToDo List</h2>
+          <input type="text" id="new-list-item" class="description" placeholder="Enter an Activity ....">
+          <button id="add-list-item" class="add-todo-list-item btn-sm">Add Item</button>
+          <button class="remove btn-sm">Delete Item</button>
+          <!-- <button class="edit">Edit Item</button> -->
+          <div id="items-list" class="col-xs-8">
+            <div class="selectable" id="sortable"></div>
+          </div>
+          <!-- <button class="removeItemButton">RemoveItem</button> -->
+          </div>
+
+          <div class="col-xs-4 m-l-3">
+            <h2>Image Gallery</h2>
+          </div>
+        </div>
       </div>
       <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>

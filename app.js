@@ -14,16 +14,13 @@ $(document).ready(function(){
 		$('.selectable').append(activityHTML);
 		$('#new-list-item').val("");
 
+
 		//Selected item ton mouse in 
 		$('.selectable div').mouseenter(function(){
 			$(this).toggleClass('activity');
-			$('.activity').click(function(){
-				$(this).toggleClass('selected');
-
-				//remove selected item 
-				$('.remove').click(function(){
-					$('.selected').remove();
-				});// end remove item
+			//Select Item
+				$('.activity').click(function(){
+					$(this).toggleClass('selected');
 
 				//Edit item
 				function editItem(){
@@ -41,26 +38,47 @@ $(document).ready(function(){
 				    var viewableText = $("<div>");
 				    viewableText.html(html);
 				    $(this).replaceWith(viewableText);
+
+				    //Making the div selectable after text has been edited. 
+				    viewableText.click(function(){
+				    	viewableText.toggleClass('selected');
+				    });
+				    
 				    // setup the click event for this new div
 				    $(viewableText).dblclick(editItem);
 				}
 
 				$('.selected').dblclick(editItem);
+
+
+
+				//remove selected item 
+				$('.remove').click(function(){
+					$('.selected').remove();
+				});// end remove item
+
+				
 			});// end selected item
 		}); // end mouse in 
 	}); //end of add item 
 
-	
 
+	//Add Images 
 
+	//select image 
 
+	//resize image 
 
-	//move selected item
+	//delete image
+
+	//move selected item - content/image
 		$('#sortable').sortable();
+
+
 
 	//hide/show list when clicked on 'Hide/Show List'  button
 	$('#toggle').click(function (){
-		$('.list').toggle("slow");
+		$('.content').toggle("slow");
 	}); //end hide/show list
 
 }); //end document ready
