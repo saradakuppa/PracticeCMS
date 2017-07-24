@@ -69,12 +69,17 @@ $(document).ready(function(){
 
 	//resize image 
 
-	//delete image
+	//delete image with small 'x' at the top left hand corner of the image 
+
 
 	//move selected item - content/image
 		$('#sortable').sortable();
 
+	//Login validation with ajax request to php
+		//If login success then hide login div for the session 
+		//else display error message login failed
 
+	//With Ajax send info from one page to another
 
 	//hide/show list when clicked on 'Hide/Show List'  button
 	$('#toggle').click(function (){
