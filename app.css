@@ -73,9 +73,49 @@ p + button {
 .list {margin-right: 50px;}
 
 
-.selected { background: #222; color: white; border: 1px solid #637a91;}
-.selectable div:hover {background: #F39814; color: white; border: 1px solid #637a91;}
-.selectable { margin: 0; padding: 0; width: 60%; }
-.selectable div { margin: 6px; padding: .4em; font-size: 1.4em; height: 50px; border: 1px solid #637a91; }
+.selected { 
+  background: #222; color: white;
+  border: 1px solid #637a91;
+}
+.selectable div:hover {
+  background: #F39814; color: white;
+  border: 1px solid #637a91;
+}
+.selectable { 
+  margin: 0; 
+  padding: 0; 
+  width: 60%; 
+}
+.selectable div { 
+  margin: 6px; padding: .4em; 
+  font-size: 1.4em; height: 50px; 
+  border: 1px solid #637a91; 
+}
 
 
+.loading {
+  animation: pulsate infinite alternate .3s;
+}
+
+img {
+  width: auto;
+  height: auto;
+  transition: opacity 1s;
+}
+
+.loading img {
+  opacity: 0;
+}
+
+.crd-blck {
+  width: 20rem;
+}
+
+@keyframes pulsate {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.8;
+    }
+}

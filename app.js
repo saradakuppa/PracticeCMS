@@ -3,6 +3,12 @@
 //git commit -m "comment"
 //git push origin master
 
+// function addFile() {
+// 		var image = $('.myFile').val();
+// 		var fileHTML = '<div class="loading">'
+
+// }
+
 
 $(document).ready(function(){
 	//Add new item to the list
@@ -63,17 +69,43 @@ $(document).ready(function(){
 	}); //end of add item 
 
 
-	//Add Images 
+	//Add Images
+	$('#myFile').change(function(){
+		var file = $(this).val();
+		console.log(file);
+		$('#add-image').click(function(){
+			var fileHTML = '<div class="card loading crd-blck">';
+			var photo = '<img src="' + file + '">';
+			fileHTML += photo + '</div>';
+			console.log(fileHTML);
+			$('.selectableFiles').append(fileHTML);
+			$('.myFile').val("");
 
-	//select image 
+			//Select image
+			$('.card').mouseenter(function(){
+				$(this).click(function(){
+					$(this).toggleClass('selected'); 
 
-	//resize image 
 
-	//delete image with small 'x' at the top left hand corner of the image 
+					//remove image
+					$('#remove-image').click(function(){
+					$('.selected').remove();
+					});// end remove item
+			}); // end Selection
+		});// end mouse enter
+	}); //end of add image with click		
+}); //end of change on file input
+	
+	//select image
 
 
-	//move selected item - content/image
+	
+
+
+	//move selected item - content
 		$('#sortable').sortable();
+
+	
 
 	//Login validation with ajax request to php
 		//If login success then hide login div for the session 
