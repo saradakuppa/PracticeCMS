@@ -22,11 +22,8 @@ $(document).ready(function(){
 
 
 		//Selected item ton mouse in 
-		$('.selectable div').mouseenter(function(){
-			$(this).toggleClass('activity');
-			//Select Item
-				$('.activity').click(function(){
-					$(this).toggleClass('selected');
+		$('.selectable div').click(function(){
+				$(this).toggleClass('selected');
 
 				//Edit item
 				function editItem(){
@@ -64,7 +61,7 @@ $(document).ready(function(){
 				});// end remove item
 
 				
-			});// end selected item
+			
 		}); // end mouse in 
 	}); //end of add item 
 
@@ -82,16 +79,15 @@ $(document).ready(function(){
 			$('.myFile').val("");
 
 			//Select image
-			$('.card').mouseenter(function(){
-				$(this).click(function(){
-					$(this).toggleClass('selected'); 
+			$('.card').click(function(){
+				$(this).toggleClass('selected'); 
 
 
-					//remove image
-					$('#remove-image').click(function(){
-					$('.selected').remove();
-					});// end remove item
-			}); // end Selection
+				//remove image
+				$('#remove-image').click(function(){
+				$('.selected').remove();
+				});// end remove item
+			
 		});// end mouse enter
 	}); //end of add image with click		
 }); //end of change on file input
@@ -104,7 +100,7 @@ $(document).ready(function(){
 
 	//move selected item - content
 		$('#sortable').sortable();
-
+		$('#sortableFiles div').sortable();
 	
 
 	//Login validation with ajax request to php
